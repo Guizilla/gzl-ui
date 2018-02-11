@@ -1,0 +1,61 @@
+
+// Tabs
+// -------------------
+
+.tab-bar {
+	background-color: @tab-bar-background-color;
+	border-bottom: 1px solid @base-border-color;
+
+	.tab {
+		color: @text-color;
+		height: @tab-height;
+		line-height: @tab-height;
+		font-size: @font-size;
+		background-color: @tab-background-color;
+		&.active {
+			color: @text-color-selected;
+			font-weight: bolder;
+			background-color: @tab-background-color-active;
+			border: 0;
+			box-sizing: border-box;
+		}
+		&:hover {
+			background-color: @tab-background-color-hover;
+		}
+
+
+		// Modified Icon (the orange circle) -------------------
+		&.modified:not(:hover) .close-icon {
+			top: calc(50%-5px);
+			right: @component-padding + 4px; // 4px -> half of icon size
+			border-color: @text-color-warning;
+		}
+		&.modified:hover .close-icon {
+			color: currentColor;
+		}
+
+
+		// Close Icon (the X) -------------------
+		.close-icon:hover {
+			color: @text-color-selected;
+		}
+		&.active .close-icon:hover {
+			color: @text-color-error;
+		}
+		&.active:not(.modified) .close-icon:hover {
+			color: @text-color-success;
+		}
+
+
+		// Dragging -------------------
+		// Styles get applied while dragging a tab
+		&.is-dragging {
+			background: darken(@tab-background-color, 10%);
+			border-color: transparent;
+			opacity: .5;
+			& .close-icon {
+				visibility: hidden;
+			}
+		}
+	}
+}

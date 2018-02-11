@@ -1,0 +1,17 @@
+
+// Status Bar
+// -------------------
+
+.status-bar {
+	font-size: @font-size;
+	color: @text-color;
+	border-top: 1px solid @base-border-color;
+	background-color: @tree-view-background-color;
+
+	.inline-block:not(:hover), a:not(:hover) {
+		color: darken(@text-color, 30%);
+	}
+	.inline-block:hover, a:hover {
+		text-decoration: none;
+	}
+}

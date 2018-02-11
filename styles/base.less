@@ -1,0 +1,32 @@
+
+// Base
+// -------------------
+
+// Used for global styles
+
+
+body {
+	font-size: @font-size;
+	color: @text-color;
+	background-color: @app-background-color;
+}
+
+atom-pane {
+	border-right: 1px solid @base-border-color;
+	&:last-child {
+		border-right: none;
+	}
+}
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: @background-color-highlight;
+}

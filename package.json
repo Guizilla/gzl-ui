@@ -1,0 +1,20 @@
+{
+  "name": "gzl-ui",
+  "theme": "ui",
+  "version": "3.0.0",
+  "description": "The blackest minimalist UI theme for Atom.",
+  "keywords": [
+    "ui",
+    "theme",
+    "essential",
+    "black",
+    "basic",
+    "simple",
+    "minimalist"
+  ],
+  "repository": "https://github.com/Guizilla/gzl-ui.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
